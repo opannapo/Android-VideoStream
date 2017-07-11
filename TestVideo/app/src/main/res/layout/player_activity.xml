@@ -1,0 +1,68 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:player="http://schemas.android.com/apk/res-auto"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:keepScreenOn="true">
+
+    <com.google.android.exoplayer2.ui.SimpleExoPlayerView
+        android:id="@+id/player_view"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        player:resize_mode="fit"
+        player:surface_type="texture_view"
+        player:use_artwork="true"
+        player:use_controller="false" />
+
+    <LinearLayout
+        android:id="@+id/linearLayout"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:background="#a9a9a9"
+        android:orientation="vertical">
+
+        <TextView
+            android:id="@+id/tKet"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:background="#ffffff"
+            android:gravity="center"
+            android:padding="10dp"
+            android:text="Ket"
+            android:textColor="#ff0000"
+            android:textSize="10dp"
+            android:textStyle="normal" />
+    </LinearLayout>
+
+    <RelativeLayout
+        android:id="@+id/layControl"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:layout_below="@+id/linearLayout"
+        android:background="#cc000000"
+        android:focusableInTouchMode="true">
+
+        <ImageButton
+            android:id="@+id/btnPlay"
+            style="@style/ExoMediaButton.Play"
+            android:layout_width="100dp"
+            android:layout_height="100dp"
+            android:layout_centerInParent="true"
+            android:layout_gravity="center"
+            android:background="#CC000000"
+            android:clickable="false" />
+
+        <ImageButton
+            android:id="@+id/btnPause"
+            style="@style/ExoMediaButton.Pause"
+            android:layout_width="100dp"
+            android:layout_height="100dp"
+            android:layout_centerInParent="true"
+            android:layout_gravity="center"
+            android:background="#CC000000"
+            android:clickable="false" />
+
+    </RelativeLayout>
+
+</RelativeLayout>
